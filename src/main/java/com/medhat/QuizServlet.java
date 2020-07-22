@@ -64,3 +64,19 @@ public class QuizServlet extends HttpServlet {
     }
 
 }
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        int amount = I
+        for (int i = 0; i < 9; i++) {
+            numbers.add(i);
+        }
+        Collections.shuffle(numbers);
+        out.print(" Method-1: Six Random number generated are: ");
+// Generate Six Random number
+        for (int j = 0; j < 6; j++) {
+            out.println("<b>" + numbers.get(j) + "</b>" + " ");
+        }
+
+        request.getRequestDispatcher("/index.jsp").forward(request, response);
+    }
